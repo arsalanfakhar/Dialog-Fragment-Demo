@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/AFragment">
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.example.samplemediumapp.ui.a_fragment.AFragment"
+        android:label="AFragment"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_AFragment_to_greetingDialog"
+            app:destination="@id/greetingDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/greetingDialog"
+        tools:layout="@layout/dialog_greeting"
+        android:name="com.example.samplemediumapp.ui.a_dialog.GreetingDialog"
+        android:label="GreetingDialog" />
+</navigation>
